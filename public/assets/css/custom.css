@@ -24,3 +24,6 @@ form#files-upload:hover {
 form#files-upload:hover .dz-message{
     color: #029587
 }
+.content .form-group {
+    margin-top: 50px;
+}

@@ -3,8 +3,15 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+use MongoDB\Client;
+use MongoDB\Collection;
 
 require_once 'functions.php';
+
+$datetime = date( 'Y-m-d H:i:s' );
+
+$client     = new Client( "mongodb://localhost:27017" );
+$collection = $client->testtask->mails;
 
 $mail_data            = [];
 $mail_data['email']   = htmlspecialchars( $_POST['mailEmail'] );
@@ -49,9 +56,27 @@ try {
 	//Content
 	$mail->isHTML( true );
 	$mail->Subject = $mail_data['subject'];
-	$mail->Body    = $mail_data['text']. 'test';
+	$mail->Body    = $mail_data['text'] . 'test';
 
+	//Отправили
 	$mail->send();
+
+	// Записали в бд
+	$result = $collection->insertOne(
+		[
+			'email'   => $mail_data['email'],
+			'subject' => $mail_data['subject'],
+			'text'    => $mail_data['text'],
+			'created' => $datetime,
+			'files' => [
+				'test1',
+				'test2',
+				'test3',
+			],
+		]
+	);
+
+
 	echo 'Успешно отправлено';
 
 } catch ( Exception $e ) {

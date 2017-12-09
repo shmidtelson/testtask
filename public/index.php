@@ -2,7 +2,7 @@
 <head>
     <title>Тестовое задание</title>
     <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css"/>
+          href="/assets/libs/bootstrap/css/bootstrap-material-design.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/basic.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.css" />
     <link rel="stylesheet" href="/assets/css/custom.css"/>
@@ -43,11 +43,12 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.0.1/jquery-migrate.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"></script>
+<script src="/assets/libs/bootstrap/js/bootstrap-material-design.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
-<script src="/assets/js/libs/tinymce/tinymce.min.js"></script>
-<script src="/assets/js/libs/tinymce/jquery.tinymce.min.js"></script>
-<script src="/assets/js/custom.js"></script>
+<script src="/assets/libs/tinymce/tinymce.min.js"></script>
+<script src="/assets/libs/tinymce/jquery.tinymce.min.js"></script>
+<script src="/assets/js/index.js"></script>
 </body>
 </html>
