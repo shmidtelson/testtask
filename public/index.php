@@ -26,15 +26,15 @@
                         <input name="mailSubject" type="text" class="form-control" id="exampleInput" required>
                     </div>
                     <div class="form-group">
-                        <label for="exampleTextarea" class="bmd-label-floating">Текст сообщения</label>
-                        <textarea name="mailText" class="form-control" id="exampleTextarea" rows="6" required></textarea>
+                        <label for="Textarea" class="bmd-label-floating">Текст сообщения</label>
+                        <textarea name="mailText" class="form-control" id="Textarea" rows="6" required></textarea>
                     </div>
 
                 </form>
 
                 <form action="/upload.php" enctype="multipart/form-data" class="dropzone" id="files-upload"></form>
 
-                <button type="submit" class="btn btn-primary btn-raised">Отправить</button>
+                <button type="submit" class="btn btn-primary btn-raised" id="submitForm">Отправить</button>
             </div>
         </div>
     </div>
@@ -46,6 +46,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.2.0/min/dropzone.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<script src="/assets/js/libs/tinymce/tinymce.min.js"></script>
+<script src="/assets/js/libs/tinymce/jquery.tinymce.min.js"></script>
 <script src="/assets/js/custom.js"></script>
 </body>
 </html>

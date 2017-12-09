@@ -20,13 +20,13 @@ try {
 	//Server settings
 //	$mail->SMTPDebug = 4;
 	$mail->isSMTP();
-	$mail->SMTPOptions = array(
-		'ssl' => array(
+	$mail->SMTPOptions = [
+		'ssl' => [
 			'verify_peer'       => false,
 			'verify_peer_name'  => false,
 			'allow_self_signed' => true
-		)
-	);
+		]
+	];
 	$mail->Host        = $config['smtp_server'];  //
 	$mail->SMTPAuth    = true;
 	$mail->Username    = $config['smtp_user'];
@@ -49,7 +49,7 @@ try {
 	//Content
 	$mail->isHTML( true );
 	$mail->Subject = $mail_data['subject'];
-	$mail->Body    = $mail_data['text'];
+	$mail->Body    = $mail_data['text']. 'test';
 
 	$mail->send();
 	echo 'Успешно отправлено';
