@@ -60,10 +60,16 @@ $totalPages = ceil( $total / $limit );
                             <td><?= $item['subject'] ?></td>
                             <td><?= html_entity_decode( $item['text'] ) ?></td>
                             <td>
-								<? if ( isset($item['files']) && $item['files'] != ''): ?>
+								<? if ( $item['files'] ): ?>
                                     <ul>
 										<? foreach ( $item['files'] as $it ): ?>
-                                            <li><?= $it ?></li>
+											<? foreach ( $it as $t ): ?>
+                                                <li>
+                                                    <a href="/files/<?= $t ?>" target="_blank" download>
+														<?= $t ?>
+                                                    </a>
+                                                </li>
+											<? endforeach; ?>
 										<? endforeach; ?>
                                     </ul>
 								<? endif; ?>

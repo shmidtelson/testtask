@@ -14,6 +14,9 @@ $(document).ready(function () {
     var currentForm = $(formName);
 
     $(formBtn).click(function () {
+        //Очищаем скрытое поле
+        currentForm.find('#mailFiles').val('');
+
         var $filesArray = [];
 
         $('.dz-success .dz-details .dz-filename span').each(function () {

@@ -80,7 +80,7 @@ if ( $mail_data['email'] && $mail_data['subject'] && $mail_data['text']){
 			'created' => $datetime,
 			'sent'    => $sent,
 			'files'   => [
-				$mail_data['files']
+				explode(",",$mail_data['files'])
 			],
 		]
 	);
