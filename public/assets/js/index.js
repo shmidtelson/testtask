@@ -14,6 +14,13 @@ $(document).ready(function () {
     var currentForm = $(formName);
 
     $(formBtn).click(function () {
+        var $filesArray = [];
+
+        $('.dz-success .dz-details .dz-filename span').each(function () {
+            $filesArray.push($(this).html());
+            currentForm.find('#mailFiles').val($filesArray);
+        });
+
         tinyMCE.triggerSave();
         currentForm.submit();
     });

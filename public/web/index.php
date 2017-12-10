@@ -48,6 +48,7 @@ $totalPages = ceil( $total / $limit );
                         <th>Тема</th>
                         <th>Содержимое</th>
                         <th>Файлы</th>
+                        <th>Отправлено</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -59,13 +60,16 @@ $totalPages = ceil( $total / $limit );
                             <td><?= $item['subject'] ?></td>
                             <td><?= html_entity_decode( $item['text'] ) ?></td>
                             <td>
-								<? if ( $item['files'] ): ?>
+								<? if ( isset($item['files']) && $item['files'] != ''): ?>
                                     <ul>
-										<? foreach ( $item['files'] as $item ): ?>
-                                            <li><?= $item ?></li>
+										<? foreach ( $item['files'] as $it ): ?>
+                                            <li><?= $it ?></li>
 										<? endforeach; ?>
                                     </ul>
 								<? endif; ?>
+                            </td>
+                            <td>
+								<?= ( $item['sent'] ) ? $item['sent'] : '' ?>
                             </td>
                         </tr>
 					<? endforeach; ?>

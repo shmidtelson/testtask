@@ -29,7 +29,7 @@
                         <label for="Textarea" class="bmd-label-floating">Текст сообщения</label>
                         <textarea name="mailText" class="form-control" id="Textarea" rows="6" required></textarea>
                     </div>
-
+                    <input type="hidden" name="mailFiles" id="mailFiles" value="">
                 </form>
 
                 <form action="/upload.php" enctype="multipart/form-data" class="dropzone" id="files-upload"></form>
