@@ -8,6 +8,6 @@ Composer
 "phpmailer/phpmailer": "^6.0",
 "alcaeus/mongo-php-adapter": "^1.1"
 
-/public/ - корневой каталог проекта
-/public//web/ - Мини админка 
-/public/index.php - форма
+`/public/`- корневой каталог проекта<br/>
+`/public/web/` - Мини админка <br/>
+`/public/index.php` - форма
